@@ -35,7 +35,7 @@ Created by [Sari Jokinen](https://github.com/sarix1) in December 2023 - February
 - PIC16F690 (20-pin, 8-bit MCU)
 - 4 x 7-segment LED displays
 - 10 x push-buttons
-- 1 rotary encoder with push button
+- Rotary encoder with push button
 - DHT11 temperature/humidity sensor
 - PWM-driven speaker on RC5/P1A
 - 4 x SIPO shift registers (CD4094B) for display output
