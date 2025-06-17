@@ -10,12 +10,12 @@ Created by [Sari Jokinen](https://github.com/sarix1) in December 2023 - February
   <tr>
     <td><a href="img/case1.jpg"><img src="img/case1.jpg" width="200"></a></td>
     <td><a href="img/case2.jpg"><img src="img/case2.jpg" width="200"></a></td>
-    <td><a href="img/case1.jpg"><img src="img/prototype.jpg" width="200"></a></td>
+    <td><a href="img/board-pcb1.jpg"><img src="img/board-pcb1.jpg" width="200"></a></td>
   </tr>
   <tr>
     <td><a href="img/board-cad1.jpg"><img src="img/board-cad1.jpg" width="200"></a></td>
     <td><a href="img/board-cad2.jpg"><img src="img/board-cad2.jpg" width="200"></a></td>
-    <td><a href="img/board-pcb1.jpg"><img src="img/board-pcb1.jpg" width="200"></a></td>
+    <td><a href="img/case1.jpg"><img src="img/prototype.jpg" width="200"></a></td>
   </tr>
   <tr>
     <td><a href="img/case-cad1.jpg"><img src="img/case-cad1.jpg" width="200"></a></td>
@@ -297,4 +297,59 @@ graph LR
     SIPO4 -->|Q6| SEG4_F[7-Seg 4 F]
     SIPO4 -->|Q7| SEG4_G[7-Seg 4 G]
     SIPO4 -->|QS| UNUSED[Unused]
+```
+
+## Layout Overview
+
+```mermaid
+graph LR
+    subgraph "Buttons"
+        BTN[10 Push Buttons:<br/>Time Set, Alarm Set<br/>Snooze, Volume, etc.]
+    end
+    
+    subgraph "Direct Inputs"
+        ENC[Rotary Encoder]
+        DHT[DHT11 Sensor]
+    end
+    
+    subgraph "Button Interface"
+        PISO2[CD4021B #2]
+        PISO1[CD4021B #1]
+    end
+    
+    subgraph "Core"
+        PIC[PIC16F690]
+    end
+    
+    subgraph "Display Interface"
+        SIPO1[CD4094B #1]
+        SIPO2[CD4094B #2]
+        SIPO3[CD4094B #3]
+        SIPO4[CD4094B #4]
+    end
+    
+    subgraph "Outputs"
+        SEG[4x 7-Segment]
+        SPK[Speaker]
+    end
+    
+    BTN --> PISO2
+    BTN --> PISO1
+    PISO2 -->|Serial| PISO1
+    PISO1 -->|Pin 12| PIC
+    
+    ENC -->|Pins 10,11| PIC
+    DHT <-->|Pin 13| PIC
+    
+    PIC -->|Pin 8| SIPO1
+    SIPO1 --> SIPO2
+    SIPO2 --> SIPO3
+    SIPO3 --> SIPO4
+    
+    SIPO1 --> SEG
+    SIPO2 --> SEG
+    SIPO3 --> SEG
+    SIPO4 --> SEG
+    
+    PIC -->|Pin 5| SPK
 ```
