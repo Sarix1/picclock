@@ -20,7 +20,7 @@ Created by [Sari Jokinen](https://github.com/sarix1) in December 2023 - February
   <tr>
     <td><a href="img/board-cad1.jpg"><img src="img/board-cad1.jpg" width="200"></a></td>
     <td><a href="img/board-cad2.jpg"><img src="img/board-cad2.jpg" width="200"></a></td>
-    <td><a href="img/case1.jpg"><img src="img/prototype.jpg" width="200"></a></td>
+    <td><a href="img/prototype.jpg"><img src="img/prototype.jpg" width="200"></a></td>
   </tr>
   <tr>
     <td><a href="img/supply-cad.jpg"><img src="img/supply-cad.jpg" width="200"></a></td>
