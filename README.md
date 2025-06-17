@@ -26,7 +26,6 @@ Created by [Sari Jokinen](https://github.com/sarix1) in December 2023 - February
     <td><a href="img/supply-cad.jpg"><img src="img/supply-cad.jpg" width="200"></a></td>
     <td><a href="img/supply-pcb1.jpg"><img src="img/supply-pcb1.jpg" width="200"></a></td>
     <td><a href="img/supply-pcb2.jpg"><img src="img/supply-pcb2.jpg" width="200"></a></td>
-    <td></td>
   </tr>
 </table>
 
