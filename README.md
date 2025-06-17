@@ -157,7 +157,7 @@ TN_ALARM_TIMER_ON ->|PI1     CLK|<- PISO Clock     |
                       CD4094B 4
 ```
 
-## Hardware Connections
+## Hardware Layout Overview
 
 ```mermaid
 graph TD
